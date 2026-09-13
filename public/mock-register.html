@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackathon Registration</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 50px auto; padding: 20px; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+    button { margin-top: 20px; padding: 10px 20px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+    #confirmation { display: none; margin-top: 20px; padding: 15px; background: #d4edda; color: #155724; }
+  </style>
+</head>
+<body>
+  <h2 id="hackathonTitle">Hackathon Registration</h2>
+
+  <form id="registerForm">
+    <label>Full Name</label>
+    <input type="text" id="name" required />
+
+    <label>Email</label>
+    <input type="email" id="email" required />
+
+    <label>College Name</label>
+    <input type="text" id="college" required />
+
+    <label>Tech Stack</label>
+    <input type="text" id="techStack" required />
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="confirmation">Registration submitted successfully!</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get("title");
+    if (title) {
+      document.getElementById("hackathonTitle").innerText = "Register: " + title;
+    }
+
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("registerForm").style.display = "none";
+      document.getElementById("confirmation").style.display = "block";
+    });
+  </script>
+</body>
+</html>

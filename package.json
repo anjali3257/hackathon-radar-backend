@@ -1,0 +1,21 @@
+{
+  "name": "hackathon-radar-backend",
+  "version": "1.0.0",
+  "description": "Backend for Hackathon/Competition Radar agent - Anakin Forge Hackathon project",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test-anakin": "node scripts/testAnakin.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0",
+    "playwright": "^1.63.0"
+  }
+}
