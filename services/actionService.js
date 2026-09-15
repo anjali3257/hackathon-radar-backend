@@ -8,7 +8,7 @@ const activeSessions = new Map();
 // Returns a sessionId + screenshot so the user can review before confirming.
 async function fillRegistration(hackathonTitle, userProfile) {
  const browser = await chromium.launch({
-  headless: "new",
+  headless: true,
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
 });
   const page = await browser.newPage();
