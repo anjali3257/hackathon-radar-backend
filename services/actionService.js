@@ -9,6 +9,7 @@ const activeSessions = new Map();
 async function fillRegistration(hackathonTitle, userProfile) {
  const browser = await chromium.launch({
   headless: true,
+  channel: "chromium",
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
 });
   const page = await browser.newPage();
