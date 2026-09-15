@@ -8,7 +8,7 @@
     "start": "node server.js",
     "dev": "node --watch server.js",
     "test-anakin": "node scripts/testAnakin.js",
-"postinstall": "npx playwright install chromium chromium-headless-shell"
+"postinstall": "npx playwright install chromium"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
