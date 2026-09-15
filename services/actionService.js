@@ -7,8 +7,8 @@ const activeSessions = new Map();
 // Step 1: opens the mock page and fills it, but does NOT submit yet.
 // Returns a sessionId + screenshot so the user can review before confirming.
 async function fillRegistration(hackathonTitle, userProfile) {
-  const browser = await chromium.launch({
-  headless: true,
+ const browser = await chromium.launch({
+  headless: "new",
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
 });
   const page = await browser.newPage();
